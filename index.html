@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+        }
+        button {
+            outline: none;
+            border: none;
+        }
+        #wrap {
+            position: relative;
+            width: 1226px;
+            height: 460px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #img-list {
+            position: absolute;
+            width: 7356px;
+        }
+        #img-list > li {
+            float: left;
+        }
+        #nav-list {
+            position: absolute;
+            top: 420px;
+            left: 50%;
+            width: 140px;
+            margin-left: -70px;
+        }
+        #nav-list > li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            text-indent: -9999em;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+        #nav-list .on {
+            background-color: #FF4400;
+        }
+        #prev, #next {
+            display: none;
+            position: absolute;
+            top: 50%;
+            width: 46px;
+            height: 80px;
+            margin-top: -40px;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #fff;
+            cursor: pointer;
+        }
+        #prev {
+            left: 0;
+        }
+        #next {
+            right: 0;
+        }
+        #prev:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        #next:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        #wrap:hover #prev {
+            display: block;
+        }
+        #wrap:hover #next {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <ul id="img-list" style="left: -1226px;">
+        <li><img src="images/img4.jpg"></li>
+        <li><img src="images/img1.jpg"></li>
+        <li><img src="images/img2.jpg"></li>
+        <li><img src="images/img3.jpg"></li>
+        <li><img src="images/img4.jpg"></li>
+        <li><img src="images/img1.jpg"></li>
+    </ul>
+    <ul id="nav-list">
+        <li class="on">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <button id="prev">&lt</button>
+    <button id="next">&gt</button>
+</div>
+
+<script src="js/slider.js"></script>
+</body>
+</html>
